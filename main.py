@@ -4,6 +4,7 @@ import math
 import config
 import physique
 
+
 #  CONFIG INITIALE
 pygame.init()  # Démarre tous les modules de Pygame (vidéo, son, événements...)
 ecran = pygame.display.set_mode((config.LARGEUR, config.HAUTEUR))  # creation fenetre de jeu
