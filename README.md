@@ -1,79 +1,79 @@
-# EarthTechProject
+# EarthTechProject - EcoThrow
 
-# EcoThrow : Ultimate Environment Defender
-EcoThrow est un jeu 2D éducatif et amusant développé en Python avec Pygame, dans lequel le joueur doit trier des déchets en les lançant dans les bonnes poubelles, tout en tenant compte de facteurs physiques comme le vent et la gravité.
+EcoThrow is an educational 2D game developed in Python using Pygame. The player must sort waste by throwing it into the correct bins while taking into account physical factors like wind and gravity.
 
-# Gameplay
+## Gameplay
 
-Vous contrôlez un déchet et devez viser puis le lancer dans la bonne poubelle de recyclage.
+You control a piece of waste and must aim, set your power, and throw it into the appropriate recycling bin.
 
- Objectif :
-Trier correctement les déchets (Plastique, Papier, Verre)
-Atteindre le score requis pour chaque niveau
-Conserver vos vies jusqu’à la fin
-⚠ Difficultés :
-🌬 Le vent influence la trajectoire
- La gravité varie selon les niveaux
- Une mouette (obstacle mobile) apparaît
-Mauvaise poubelle = perte de vie
- Commandes
+### Objective
+- Sort the waste correctly (Plastic, Paper, Glass).
+- Reach the required score for each level to progress to the next.
+- Preserve your lives until the end of the game.
 
+### Challenges
+- Wind: Influences the horizontal trajectory of your throw.
+- Gravity: Varies by level and affects how fast the waste drops.
+- The Shark Obstacle: A moving shark appears in the Ocean level. Touching it makes your waste bounce off.
+- Wrong Bin: Throwing waste into the wrong recycling bin results in a loss of life.
 
-# Fonctionnalités 
-Système de physique réaliste (projectiles)
-Différents environnements (Plage, Forêt, Océan)
-Obstacle dynamique (mouette)
-Animation de pluie
-Messages de feedback (réussite / erreur)
-Système de vies
-Progression par niveaux 
-Système physique
+### Controls
+- ENTER: Start the game from the main menu.
+- UP / DOWN Arrows: Adjust the throwing angle.
+- LEFT / RIGHT Arrows: Adjust the throwing power.
+- SPACE: Throw the waste.
+- R: Restart the game from the end screens.
 
-Le jeu repose sur des principes simples de physique :
+## Features
+- Physics System: Projectile paths are influenced by gravity and wind over time.
+- Trajectory Preview: A dotted aim guide is displayed before your throw based on physics calculations.
+- Different Environments: Unique scenery including gradients for Beach, Forest, and Ocean levels.
+- Immersive Game Feel: Bouncing UI elements, screen shakes, particle gravity, and satisfying retro sound effects.
+- Dynamic Difficulty: Obstacles like animals and exams, plus moving recycling bins in later levels.
+- Transparent UI: Interface elements with a frosted glass effect and a circular power gauge.
+- English Codebase: Source code and comments are documented in English.
 
-Vitesse initiale calculée avec l’angle et la force
-Gravité qui influence la vitesse verticale
-Vent qui influence la vitesse horizontale
+## Levels
 
-Une prévisualisation de la trajectoire est affichée avant le lancer (inspiré de Angry Birds).
+| Level | Name | Setting | Mechanics |
+|---|---|---|---|
+| 1 | Beach | Sunny | No wind, standard gravity. |
+| 2 | Forest | Cloudy | Introduction to wind mechanics. |
+| 3 | Ocean | Underwater | Strong wind, higher gravity, and the shark obstacle. |
+| 4 | Mountain | Snowy Peaks | Variable wind, high gravity, moving bins, and the eagle obstacle. |
+| 5 | Antarctica | Ice & Igloos | Extreme wind, high gravity, moving bins, and the penguin obstacle. |
+| 6 | Bonus Level | Campus | Intense wind, fast-moving bins, and a special flying exam obstacle. |
 
-# Niveaux
-Niveau	Nom	Particularités
-1	Plage 🌴	Aucun vent, niveau facile
-2	Forêt 🌲	Introduction du vent
-3	Océan 🌊	Vent fort + mouette + pluie
- Types de déchets
- Plastique
- Papier
- Verre
+## Types of Waste & Bins
+1. Plastic: Yellow Bin.
+2. Paper: Blue Bin.
+3. Glass: Green Bin.
 
-Chaque déchet doit être lancé dans la bonne poubelle !
+## Project Structure
 
-# Structure du projet
-project/
+```text
+EarthTechProject/
 │
-├── main.py       # Boucle principale du jeu
-├── physique.py   # Calculs physiques et collisions
-├── config.py     # Constantes et paramètres
-⚙️ Installation
-1. Installer Python (version 3 recommandée)
-2. Installer les dépendances
-pip install pygame
-3. Lancer le jeu
-python main.py
-# Fonctionnement
- Module physique.py
-Calcul des vitesses
-Mise à jour des positions
-Gestion des collisions
- Fichier main.py
-Boucle de jeu
-Gestion des entrées clavier
-Affichage (graphismes, UI)
- Fichier config.py
-Dimensions de l’écran
-Couleurs
-Paramètres du jeu
+├── main.py       # Main game loop, graphics, visuals, UI, and event handling
+├── physics.py    # Physics rules (velocity, positioning) and collision math
+├── config.py     # Constants, colors palettes, and game parameters
+└── README.md     # Project documentation
+```
 
-# Work Share
-This work done equally by Jonas Tubiana, Jean Monier-Vinard Azoulay, and Nuri Ozyer.
+## Installation & Running
+
+1. Install Python (version 3+ recommended).
+2. Install Pygame (the main graphics library):
+   ```bash
+   pip install pygame
+   ```
+3. Start the game:
+   ```bash
+   python main.py
+   ```
+
+## Work Share
+This project was developed equally by:
+- Jonas Tubiana
+- Jean Monier-Vinard Azoulay
+- Nuri Ozyer
